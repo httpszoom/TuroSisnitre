@@ -17,5 +17,8 @@ jobs:
     - name: Install dependencies
       run: |
         pip install tweepy
+      run: |
+        pip install -r requirements.txt
     - name: Run script
       run: python your_script.py
+   
