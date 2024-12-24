@@ -1,0 +1,21 @@
+name: Run Script Daily
+
+on:
+  schedule:
+    - cron: '30 9 * * *'  # Tous les jours à 9h30 UTC (ajustez selon votre fuseau horaire)
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        pip install tweepy
+    - name: Run script
+      run: python your_script.py
