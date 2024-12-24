@@ -1,5 +1,5 @@
 name: Run Script Daily
-
+run: python sinistre.py
 on:
   schedule:
     - cron: '30 9 * * *'  # Tous les jours à 9h30 UTC (ajustez selon votre fuseau horaire)
